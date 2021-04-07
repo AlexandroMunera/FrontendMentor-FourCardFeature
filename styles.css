@@ -21,6 +21,15 @@ body {
           flex-direction: column;
   text-align: center;
   margin-bottom: 6rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media screen and (min-width: 720px) {
+  header {
+    width: 70%;
+  }
 }
 
 .title {
@@ -48,6 +57,18 @@ strong {
       -ms-flex-direction: column;
           flex-direction: column;
   row-gap: 2rem;
+}
+
+@media screen and (min-width: 720px) {
+  .cards-section {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (1fr)[3];
+        grid-template-columns: repeat(3, 1fr);
+    -ms-grid-rows: (1fr)[8];
+        grid-template-rows: repeat(8, 1fr);
+    gap: 1.5rem;
+  }
 }
 
 .card {
@@ -92,17 +113,37 @@ strong {
 
 .card:nth-child(1) {
   border-top: 4px solid #45d3d3;
+  -ms-grid-row: 3;
+  -ms-grid-row-span: 4;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-area: 3 / 1 / 7 / 2;
 }
 
 .card:nth-child(2) {
   border-top: 4px solid #ea5353;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 4;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
+  grid-area: 1 / 2 / 5 / 3;
 }
 
 .card:nth-child(3) {
   border-top: 4px solid #fcaf4a;
+  -ms-grid-row: 5;
+  -ms-grid-row-span: 4;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
+  grid-area: 5 / 2 / 9 / 3;
 }
 
 .card:nth-child(4) {
   border-top: 4px solid #549ef2;
+  -ms-grid-row: 3;
+  -ms-grid-row-span: 4;
+  -ms-grid-column: 3;
+  -ms-grid-column-span: 1;
+  grid-area: 3 / 3 / 7 / 4;
 }
 /*# sourceMappingURL=styles.css.map */
